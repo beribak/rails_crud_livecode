@@ -1,0 +1,11 @@
+<h2>index page</h2>
+
+<% @lost_pets.each do |pet| %>
+    <div><%= pet.name %></div>
+    <div><%= pet.found_on %></div>
+    <%= link_to "Show Pet", lost_pet_path(pet) %>
+    <%= link_to "Delete Pet", lost_pet_path(pet), method: :delete, data: {confirm: "Are you sure?"} %>
+    <br>
+    <br>
+    <br>
+<% end %>

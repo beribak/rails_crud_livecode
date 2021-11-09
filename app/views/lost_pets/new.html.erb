@@ -1,0 +1,17 @@
+<%#= form_for(@lost_pet) do |f| %>
+   <%#= f.text_field :name %>
+   <%#= f.text_field :address %>
+   <%#= f.text_field :species %>
+   <%#= f.date_field :found_on, class: "date-field" %>
+   <%#= f.submit %>
+<%# end %>
+
+<div class="m-auto w-50 p-5 bg bg-primary">
+    <%= simple_form_for(@lost_pet) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :species %>
+        <%= f.input :found_on %>
+        <%= f.submit %>
+    <% end %>
+</div>
